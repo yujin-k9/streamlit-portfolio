@@ -9,8 +9,14 @@ st.set_page_config(
 )
 
 # --- Branding Header ---
-st.title("🤸‍♀️ Lifestyle & Health Risk Prediction")
-st.subheader("A Streamlit Portfolio by Yujin Kim")
+st.markdown(
+    "<h1 style='color:#234769;'>🤸‍♀️ Lifestyle & Health Risk Prediction</h1>",
+    unsafe_allow_html=True
+)
+st.markdown(
+    "<h4 style='color:#91A3B4;'>A Streamlit Portfolio by Yujin Kim</h4>",
+    unsafe_allow_html=True
+)
 
 # Optional profile image or logo
 try:
@@ -20,19 +26,16 @@ except:
     st.sidebar.write("")
 
 # --- Sidebar Navigation ---
-st.sidebar.title("📂 Navigation")
-st.sidebar.info(
-    "Use the sidebar to explore pages:\n\n"
-    "1️⃣ Professional Bio\n"
-    "2️⃣ EDA Gallery\n"
-    "3️⃣ Dashboard\n"
-    "4️⃣ Future Work"
+st.sidebar.title("🔍 Navigation")
+st.sidebar.markdown(
+    "Curious to learn more? Explore each section through the tabs above.",
 )
 
-st.markdown("---")
-
 # --- Main Introduction ---
-st.header("Welcome to My Streamlit Portfolio")
+st.markdown(
+    "<h3 style='color:#234769;'>Welcome to My Streamlit Portfolio!</h3>",
+    unsafe_allow_html=True
+)
 st.write(
     """
     This multi-page Streamlit application demonstrates my ability to perform data-driven storytelling 
@@ -52,7 +55,10 @@ st.write(
 st.markdown("---")
 
 # --- Contact / Branding Section ---
-st.header("📬 Contact")
+st.markdown(
+    "<h3 style='color:#234769;'>📬 Contact</h3>",
+    unsafe_allow_html=True
+)
 col1, col2 = st.columns([1, 3])
 
 with col1:

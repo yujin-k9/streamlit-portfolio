@@ -59,14 +59,18 @@ st.markdown(
     "<h3 style='color:black;'>📬 Contact</h3>",
     unsafe_allow_html=True
 )
+
 col1, col2 = st.columns([1, 3])
 
 with col1:
-    try:
-        profile = Image.open("assets/hammy.png")
-        st.image(profile, caption="Yujin Kim", width=180)
-    except:
-        st.write("")
+    st.image("assets/hammy.png", caption="Yujin Kim", width=180)
+    # Alt-text
+    st.markdown(
+        """
+        <span style="font-size:0px;" aria-label="Profile photo of Yujin Kim"></span>
+        """,
+        unsafe_allow_html=True
+    )
 
 with col2:
     st.write("**Email:** ykim20@msudenver.edu")  

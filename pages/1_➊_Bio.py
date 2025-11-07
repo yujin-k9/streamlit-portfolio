@@ -14,11 +14,17 @@ with col1:
     try:
         profile_img = Image.open("assets/hammy.png")
         st.image(profile_img, caption="Yujin Kim", width=220)
+        # Alt-text
+        st.markdown(
+            """
+            <span style="font-size:0px;" aria-label="Profile photo of Yujin Kim"></span>
+            """,
+            unsafe_allow_html=True
+        )
     except:
         st.write("_Profile image not available._")
 
 with col2:
-    # Add padding-left and top margin to visually separate text
     st.markdown(
         "<div style='padding-left:20px; margin-top:25px;'>"
         "I am a data analytics student passionate about transforming raw information into clear, meaningful insights.<br>"

@@ -209,6 +209,11 @@ st.markdown("""
 
 
 # -----------------------------
-# Accessibility Footer
+# Accessibility & Ethics Footer
 # -----------------------------
-st.caption("All visuals use color-blind-safe palettes and descriptive titles for accessibility.")
+st.markdown("---")
+st.caption(
+    "🧭 Ethics & Accessibility Note: This dataset is synthetic and does not include real individuals. "
+    "All visuals use color-blind-safe palettes, clear labeling, and descriptive titles for accessibility. "
+    "Charts illustrate general trends only and are not intended for individual-level prediction."
+)

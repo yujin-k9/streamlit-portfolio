@@ -122,7 +122,7 @@ st.markdown("""
 
 # --- Footer / Reproducibility Section ---
 st.markdown("---")
-st.subheader("🔍 Data Source & Reproducibility")
+st.markdown("### 🔍 Data Source & Reproducibility")
 
 st.markdown(
     """
@@ -134,3 +134,13 @@ st.markdown(
 
 # One-line “Last Refreshed” timestamp (dynamic)
 st.caption(f"Last refreshed: {datetime.now().strftime('%B %d, %Y at %I:%M %p')}")
+
+# -----------------------------
+# Accessibility & Ethics Footer
+# -----------------------------
+st.markdown("---")
+st.caption(
+    "🧭 Ethics & Accessibility Note: This dataset is synthetic and does not include real individuals. "
+    "All visuals use color-blind-safe palettes, clear labeling, and descriptive titles for accessibility. "
+    "Charts illustrate general trends only and are not intended for individual-level prediction."
+)

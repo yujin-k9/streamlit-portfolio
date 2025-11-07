@@ -1,7 +1,7 @@
 # Lifestyle and Health Risk Streamlit Dashboard
 <img width="1211" height="587" alt="Image" src="https://github.com/user-attachments/assets/7b330b39-3383-4112-a397-01e1e4ab0f53" />
 
-View the deployed Streamlit application:  https://yujin-k9-streamlit-portfolio-portfolio-mndq24.streamlit.app/
+View the deployed Streamlit application:  https://app-portfolio-adfxquzbqmm8mkfjk7miit.streamlit.app/
 
 
 

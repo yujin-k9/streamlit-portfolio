@@ -1,11 +1,15 @@
 import streamlit as st
 from PIL import Image
 
-st.set_page_config(page_title="Professional Bio", page_icon="👤")
+st.set_page_config(page_title="Professional Bio", page_icon="🪐")
 
 # --- Title ---
-st.title("👤 Professional Bio")
-st.write("### Data Analytics & Visualization Enthusiast")
+st.title("Professional Bio")
+st.markdown(
+    "<h4 style='color:#828B9E;'>Data Analytics & Visualization Enthusiast</h4>",
+    unsafe_allow_html=True
+)
+
 
 # --- Profile Section ---
 col1, col2 = st.columns([1.2, 2.8])
@@ -26,17 +30,20 @@ with col1:
 
 with col2:
     st.markdown(
-        "<div style='padding-left:20px; margin-top:25px;'>"
-        "I am a data analytics student passionate about transforming raw information into clear, meaningful insights.<br>"
-        "My main interests lie in <b>data visualization</b>, <b>machine learning</b>, and <b>human-centered analytics design</b>.<br>"
-        "I enjoy building interactive dashboards that combine storytelling, accuracy, and accessibility.<br>"
-        "This Streamlit portfolio reflects my approach to analyzing health and lifestyle data through clean visual communication."
-        "</div>",
-        unsafe_allow_html=True,
-    )
+    """
+    <div style='padding-left:20px; margin-top:25px;'>
+    I am a <b>senior Computer Science student</b> at <b>Metropolitan State University of Denver</b>.<br>
+    I am passionate about transforming raw information into clear, meaningful insights.<br>
+    My main interests include <b>data visualization</b> and <b>human-centered analytics design</b>.<br>
+    I enjoy creating interactive dashboards that balance <b>storytelling</b>, <b>accuracy</b>, and <b>accessibility</b>.
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
+
 
 # --- Highlights ---
-st.markdown("### Professional Highlights")
+st.markdown("### 🪐༘⋆ Professional Highlights")
 st.write(
     """
     - Coursework in **Python**, **Pandas**, **Plotly**, **Altair**, and **Streamlit**  
@@ -48,7 +55,7 @@ st.write(
 )
 
 # --- Visualization Philosophy ---
-st.markdown("### Visualization Philosophy")
+st.markdown("### 🪐༘⋆ Visualization Philosophy")
 st.write(
     """
     My visualization philosophy centers on **clarity**, **accessibility**, and **integrity**.  

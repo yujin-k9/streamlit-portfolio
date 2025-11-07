@@ -1,31 +1,81 @@
-# Streamlit Portfolio – Lifestyle and Health Risk Prediction
+# Lifestyle and Health Risk Streamlit Dashboard
+<img width="1211" height="587" alt="Image" src="https://github.com/user-attachments/assets/7b330b39-3383-4112-a397-01e1e4ab0f53" />
 
-## Overview
+View the deployed Streamlit application:  https://yujin-k9-streamlit-portfolio-portfolio-mndq24.streamlit.app/
 
-This Streamlit portfolio app serves as both a professional showcase and an interactive analytics project.
-It explores a dataset of 5,000 individuals’ lifestyle habits and health risk levels.
 
-## Pages
 
-1. 👤 **Bio:** Professional summary and visualization philosophy
-2. 📊 **EDA Gallery:** Four interactive charts with “How to read” explainers
-3. 📈 **Dashboard:** Filters, KPIs, and linked visual insights
-4. 🚀 **Future Work:** Next steps and reflections
+This Streamlit app explores relationships between **lifestyle habits** and **health risk indicators** using a synthetic dataset of 5,000 individuals.  
+It provides interactive data visualizations, summary metrics, and future work plans for expanding the analysis.
 
-## Dataset
 
-**Name:** Lifestyle and Health Risk Prediction (Synthetic Dataset)  
-**Rows:** 5000  
-**Columns:** 12  
-**Description:** Lifestyle and health indicators including age, exercise, sleep, sugar intake, BMI, and risk level.
+## Author
+**Yujin Kim**  
+📧 ykim20@msudenver.edu  
 
-## Tools
 
-Python • Pandas • Altair • Plotly • Streamlit
+## App Navigation Overview
 
-## Run Locally
+This Streamlit app is structured into **four interactive pages**, accessible from the left sidebar:
+
+### ① Bio  
+
+Introduces the author and project purpose.  
+Includes a professional bio, contact information, and visualization philosophy emphasizing **clarity, accessibility, and ethical communication**.  
+
+### ② EDA Gallery 
+
+Showcases **Exploratory Data Analysis (EDA)** with four unique chart types:  
+- **Bar Chart** – Exercise Frequency vs. Health Risk  
+- **Scatter Plot** – Sleep Duration vs. BMI  
+- **Box Plot** – Marital Status vs. BMI  
+- **Heatmap** – Correlations between numeric variables  
+Each visualization includes a guiding question, “How to read this chart” section, and key insights.
+
+### ③ Dashboard  
+
+An **interactive analytics dashboard** combining key metrics and filters.  
+Displays:
+- Average BMI, Sleep Hours, and High-Risk Percentage  
+- Dynamic filters for Exercise Level, Age Range, and Alcohol Consumption  
+Visuals and KPIs update instantly based on user selections, allowing customized exploration.
+
+### ④ Future Work  
+
+Outlines **next development steps** and reflections from prototype to final build.  
+Includes:
+- Predictive modeling (forecasting) ideas  
+- Data enrichment and accessibility audits  
+- A/B layout experimentation for improved usability  
+Features an embedded concept image and professional reflection.
+
+## Dataset Information
+
+**Dataset:** [[Lifestyle and Health Risk Prediction (Synthetic)](https://www.kaggle.com/datasets/miadul/lifestyle-and-health-risk-prediction)]  
+**Records:** 5,000 rows  
+**Source:** Kaggle (Synthetic Dataset — not based on real people)  
+
+**Preprocessing Performed:**
+- Converted categorical variables to ordered categories for logical chart display (e.g., exercise level)
+- Created a derived numeric column `risk_score` to represent health risk levels for visualization purposes
+- Sampled 200 records for scatter plot clarity (to avoid overplotting)
+
+**Ethics Note:**  
+This dataset is **synthetic** and does **not include real individuals**.  
+All visuals use color-blind-safe palettes, clear labeling, and descriptive titles for accessibility.  
+Charts illustrate general patterns only and are **not intended for personal health prediction**.
+
+
+## Requirements
+
+All dependencies are listed in `requirements.txt`.  
+Install them before running the app:
 
 ```bash
 pip install -r requirements.txt
-streamlit run app.py
 ```
+
+## AI Assistance Acknowledgment
+
+This project was partially developed with ChatGPT (OpenAI) for code refinement and documentation clarity.
+All data analysis and final implementation were reviewed and completed by the author.

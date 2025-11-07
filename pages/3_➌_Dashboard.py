@@ -2,6 +2,10 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from datetime import datetime
+import pytz
+
+denver_tz = pytz.timezone("America/Denver")
+local_time = datetime.now(denver_tz)
 
 # --- Page Setup ---
 st.set_page_config(page_title="Health Risk Dashboard", page_icon="📈")
@@ -133,7 +137,8 @@ st.markdown(
 )
 
 # One-line “Last Refreshed” timestamp (dynamic)
-st.caption(f"Last refreshed: {datetime.now().strftime('%B %d, %Y at %I:%M %p')}")
+st.caption(f"Last refreshed: {local_time.strftime('%B %d, %Y at %I:%M %p')}")
+
 
 # -----------------------------
 # Accessibility & Ethics Footer

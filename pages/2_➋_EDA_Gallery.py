@@ -9,21 +9,20 @@ import plotly.express as px
 st.set_page_config(page_title="EDA Gallery", page_icon="📊")
 
 st.title("📊 EDA Gallery")
-st.write("### Exploratory Data Analysis on Lifestyle and Health Risk Dataset")
-
-# Load dataset
-df = pd.read_csv("data/Lifestyle_and_Health_Risk_Prediction_Synthetic_Dataset.csv")
-sns.set_palette("colorblind")
-
+st.write("### Lifestyle and Health Risk Dataset")
 st.markdown(
     """
     <p style="color:#5E636C; margin-bottom:6px;">
-    This gallery explores relationships between lifestyle habits and overall health risk among 5,000 individuals.
+    This gallery explores how lifestyle factors—such as exercise, sleep, and habits—relate to overall health risk among 5,000 individuals.
     </p>
     <hr style="margin-top:10px; margin-bottom:15px;">
     """,
     unsafe_allow_html=True
 )
+
+# Load dataset
+df = pd.read_csv("data/Lifestyle_and_Health_Risk_Prediction_Synthetic_Dataset.csv")
+sns.set_palette("colorblind")
 
 # -----------------------------
 # 1️⃣ Chart 1: Exercise vs Health Risk (Bar Chart)
@@ -75,9 +74,9 @@ st.markdown("""
 
 st.markdown("**Insights:**")
 st.markdown("""
-- Individuals who exercise more frequently show lower average health risk scores.  
-- Sedentary and low-exercise groups have the highest mean risk.  
-- This suggests a clear inverse relationship between physical activity and health risk.
+- **Higher exercise frequency is clearly associated with lower health risk levels.**  
+- Sedentary and low-exercise groups show **the highest mean risk scores**, while active individuals maintain lower averages.  
+- This pattern demonstrates an inverse relationship between physical activity and overall health risk.  
 """)
 
 
@@ -127,32 +126,34 @@ st.markdown("""
 
 st.markdown("**Insights:**")
 st.markdown("""
+- Sleep duration shows only a **weak relationship** with BMI. 
 - Most people cluster around 7 hours of sleep and BMI between 18 and 30.  
-- No clear linear trend, but moderate sleep links to stable BMI.  
-- Regular sleep supports weight balance, not direct BMI prediction.
+- No clear linear trend is observed, but moderate sleep links to more stable BMI values.  
+- Regular sleep appears supportive for weight balance rather than a direct predictor of BMI.
 """)
 
+
 # -----------------------------
-# 3️⃣ Chart 3: Alcohol vs BMI (Box Plot)
+# 3️⃣ Chart 3: Married vs BMI (Box Plot)
 # -----------------------------
-st.markdown("### ➌ Alcohol vs BMI")
+st.markdown("### ➌ Marital Status vs BMI")
 st.markdown(
-    '<p style="color:#CD404B;"><i>Question: How does BMI vary between drinkers and non-drinkers?</i></p>',
+    '<p style="color:#CD404B;"><i>Question: Does marital status influence body mass index (BMI)?</i></p>',
     unsafe_allow_html=True
 )
 
 fig3 = px.box(
     df,
-    x="alcohol",
+    x="married",
     y="bmi",
-    color="alcohol",
+    color="married",
     color_discrete_sequence=px.colors.qualitative.Set2,
-    title="Distribution of BMI by Alcohol Consumption",
+    title="Distribution of BMI by Marital Status",
     points="outliers"
 )
 
 fig3.update_layout(
-    xaxis_title="Alcohol Consumption",
+    xaxis_title="Marital Status",
     yaxis_title="Body Mass Index (BMI)",
     plot_bgcolor="white",
     paper_bgcolor="white",
@@ -163,18 +164,19 @@ st.plotly_chart(fig3, use_container_width=True)
 
 st.markdown("**How to read this chart:**")
 st.markdown("""
-- Each box shows the BMI distribution for drinkers and non-drinkers.  
+- Each box represents BMI distribution for married and unmarried individuals.  
 - The line in the box is the median BMI.  
 - Taller boxes mean more variation; dots represent outliers.
 """)
 
 st.markdown("**Insights:**")
 st.markdown("""
-- Both groups show nearly identical medians and distributions.  
-- Alcohol consumption does not have a significant effect on BMI changes.  
-- However, the non-drinker group shows extremely high BMI outliers.  
-→ This suggests that while the average difference is minimal, some non-drinkers may have severe obesity.
+- Marital status shows **a minor influence on BMI**, with married individuals having a slightly higher median.  
+- Both groups display nearly the same variation in BMI distribution.  
+- However, only the married group includes a few high-BMI outliers, suggesting potential lifestyle-related effects after marriage.  
 """)
+
+
 
 
 # -----------------------------

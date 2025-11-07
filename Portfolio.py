@@ -10,7 +10,7 @@ st.set_page_config(
 
 # --- Branding Header ---
 st.markdown(
-    "<h1 style='color:#234769;'>🤸‍♀️ Lifestyle & Health Risk Prediction</h1>",
+    "<h1 style='color:black'>🤸‍♀️ Lifestyle & Health Risk Prediction</h1>",
     unsafe_allow_html=True
 )
 st.markdown(
@@ -56,7 +56,7 @@ st.markdown("---")
 
 # --- Contact / Branding Section ---
 st.markdown(
-    "<h3 style='color:#234769;'>📬 Contact</h3>",
+    "<h3 style='color:black;'>📬 Contact</h3>",
     unsafe_allow_html=True
 )
 col1, col2 = st.columns([1, 3])

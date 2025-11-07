@@ -16,10 +16,14 @@ df = pd.read_csv("data/Lifestyle_and_Health_Risk_Prediction_Synthetic_Dataset.cs
 sns.set_palette("colorblind")
 
 st.markdown(
-    '<p style="color:#5E636C;">This gallery explores relationships between lifestyle habits and overall health risk among 5,000 individuals.</p>',
+    """
+    <p style="color:#5E636C; margin-bottom:6px;">
+    This gallery explores relationships between lifestyle habits and overall health risk among 5,000 individuals.
+    </p>
+    <hr style="margin-top:10px; margin-bottom:15px;">
+    """,
     unsafe_allow_html=True
 )
-
 
 # -----------------------------
 # 1️⃣ Chart 1: Exercise vs Health Risk (Bar Chart)

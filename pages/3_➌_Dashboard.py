@@ -80,10 +80,14 @@ fig1 = px.scatter(
     color="health_risk",
     opacity=0.7,
     title="BMI vs Age by Health Risk",
-    color_discrete_sequence=px.colors.qualitative.Safe,
+    color_discrete_map={
+        "high": "#ec5300",
+        "low": "#7FBF7F",
+    },
     render_mode="svg"
 )
 st.plotly_chart(fig1, use_container_width=True)
+
 
 # --- Chart 2: Bar (Sleep vs Exercise) ---
 st.markdown("### ➋ Average Sleep Duration by Exercise Level")
@@ -96,11 +100,16 @@ fig2 = px.bar(
     color="exercise",
     title="Average Sleep Hours by Exercise Level",
     text_auto=".1f",
-    color_discrete_sequence=px.colors.qualitative.Safe,
+    color_discrete_map={
+        "none": "#6fa8dc",   
+        "low": "#5886b0",    
+        "medium": "#37546e", 
+        "high": "#0b1016"    
+    },
     category_orders={"exercise": ["none", "low", "medium", "high"]}
 )
-
 st.plotly_chart(fig2, use_container_width=True)
+
 
 
 # --- Chart 3: Pie (Health Risk Distribution) ---
@@ -109,9 +118,14 @@ fig3 = px.pie(
     filtered_df,
     names="health_risk",
     title="Proportion of Health Risk Levels",
-    color_discrete_sequence=px.colors.qualitative.Safe
+    color="health_risk",
+    color_discrete_map={
+        "high": "#ec5300",
+        "low": "#7FBF7F",
+    }
 )
 st.plotly_chart(fig3, use_container_width=True)
+
 
 # --- Insights ---
 st.markdown("**Insights:**")
